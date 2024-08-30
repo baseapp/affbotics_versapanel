@@ -50,3 +50,14 @@ This project provides MicroPython support for VersaPanels, including integration
    - Click the `STOP` button at the top of Thonny IDE to perform a soft restart of the device.
    - Your device should now be running VersaOS.
 
+
+## Adding your app to Versapanel
+You can refer to apps/demo.py as a reference for creating your app
+1. create a Python file in apps/your_app_name.py
+2. import module lvgl
+3. [icon conversion] and give it the same name as your app but with a .bin extension
+4. Create functions `drawScreen()`, `clearScreen()` and `loop_task()`
+   - When your app is imported and the `drawScreen()` function is called, this function acts like `setup()` function in Arduino.
+   - The `loop_task()` function is called every 50 milliseconds, which acts like `loop()` in Arduino.
+   - And the `clearScreen()` function is called when your app is ended, you can call the function lvgl clean function to clear the screen and remove the widgets from the memory and do any other cleanups
+5. Save the file and do a soft or hard reboot for changes to take effect
