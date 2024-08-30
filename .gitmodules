@@ -1,0 +1,3 @@
+[submodule "embedded/affbotics_micropython"]
+	path = embedded/affbotics_micropython
+	url = https://github.com/baseapp/affbotics_micropython
